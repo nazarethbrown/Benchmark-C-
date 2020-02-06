@@ -2,13 +2,17 @@
 using namespace std;
 
 void integer_benchmark(){
-   long n = 0;
-   for(long i = 0; i < 100000000000; i++){
+  long long n = 0;
+   for(long long i = 0; i < 100000000000; i++){
       n++;
     }
-   long m = 6;
-   for(long j = 0; j < 50000000000; j++){
+    long long m = 2;
+    for(long long j = 0; j < 50000000000; j++){
       m = 6 * m;
+    }
+    long long p = 63748930239392034;
+    for(long long k = 0; k < 20000000000; k++){
+      p = p/2;
     }
 }
 
@@ -16,3 +20,4 @@ int main() {
   
   cout << "Hello World!\n";
 }
+
