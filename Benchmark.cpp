@@ -82,6 +82,12 @@ string line;
 string count;
 
 ifstream readfile("text.txt");
+if (readfile.is_open()){
+  while(getline(readfile,line)){
+    count = line;
+  }
+  readfile.close();
+}
 
 }
 int main() {
