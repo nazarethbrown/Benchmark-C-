@@ -30,16 +30,16 @@ void integer_benchmark(){
 void float_benchmark(){
    time_t start, stop;
   time(&start);
-  double double n = 0.0;
-   for(double double i = 0; i < 100000000000; i++){
+  double n = 0.0;
+   for(double i = 0; i < 100000000000; i++){
       n++;
     }
-    double double m = 2.0;
-    for(double double j = 0; j < 50000000000; j++){
+    double m = 2.0;
+    for(double j = 0; j < 50000000000; j++){
       m = 6.0 * m;
     }
-    double double p = 63748930239392034.90394458;
-    for(double double k = 0; k < 20000000000; k++){
+    double p = 63748930239392034.90394458;
+    for(double k = 0; k < 20000000000; k++){
       p = p/2.0;
     }
     time(&stop);
@@ -48,9 +48,26 @@ void float_benchmark(){
 
 }
 void memory_benchmark(){
+  time_t start, stop;
+  time(&start);
+  long long list[100000];
+  for(long long i = 0; i < 50000; i++){
+    for(long long j = 0; j < 100000; j++){
+      list[i] = 2;
+    }
+  for(long long n = 0; n < 50000; n++){
+    for(long long m = 0; m < 100000; m++){
+      long long read = list[m];
+    }
+  }
 
+  }
+ time(&stop);
+ double time;
+ time = double(stop - start);
 }
 void file_benchmark(){
+  time_t start, stop;
   
 }
 int main() {
