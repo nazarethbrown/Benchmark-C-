@@ -26,6 +26,7 @@ void integer_benchmark(){
     time(&stop);
     double time;
     time = double(stop - start);
+     cout << "Integer: " << time << endl;
 }
 void float_benchmark(){
    time_t start, stop;
@@ -45,6 +46,7 @@ void float_benchmark(){
     time(&stop);
     double time;
     time = double(stop - start);
+    cout << "Float: " << time << endl;
 
 }
 void memory_benchmark(){
@@ -65,6 +67,7 @@ void memory_benchmark(){
  time(&stop);
  double time;
  time = double(stop - start);
+ cout << "Memory: " << time << endl;
 }
 void file_benchmark(){
   time_t start, stop;
@@ -88,10 +91,15 @@ if (readfile.is_open()){
   }
   readfile.close();
 }
-
+ time(&stop);
+ double time;
+ time = double(stop - start);
+ cout << "File: " << time << endl;
 }
 int main() {
-  
-  cout << "Hello World!\n";
+  integer_benchmark();
+  float_benchmark();
+  memory_benchmark();
+  file_benchmark();
 }
 
