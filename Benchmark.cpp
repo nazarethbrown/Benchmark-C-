@@ -68,7 +68,12 @@ void memory_benchmark(){
 }
 void file_benchmark(){
   time_t start, stop;
-  
+  time(&start);
+
+  ofstream file;
+
+file.open("new.txt");
+
 }
 int main() {
   
