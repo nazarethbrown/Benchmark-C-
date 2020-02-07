@@ -74,6 +74,15 @@ void file_benchmark(){
 
 file.open("new.txt");
 
+for(long long i = 0; i < 1000000000; i++){
+  file << "joey" << endl;
+}
+
+string line;
+string count;
+
+ifstream readfile("text.txt");
+
 }
 int main() {
   
